@@ -1,1 +1,4 @@
-﻿This is project contains some useful Utility classes and widgets to use with Sitecore
+﻿# Coreblimey.Utils
+
+
+This project contains some useful utility classes and widgets to use with Sitecore
