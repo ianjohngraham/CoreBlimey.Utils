@@ -75,6 +75,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Readme.txt" />
     <Content Include="xDB Contact Creator\CreateContact.aspx" />
     <Content Include="xDB Contact Creator\Readme.txt" />
   </ItemGroup>
