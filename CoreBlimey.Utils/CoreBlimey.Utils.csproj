@@ -75,9 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Readme.txt" />
+    <None Include="Readme.md" />
     <Content Include="xDB Contact Creator\CreateContact.aspx" />
-    <Content Include="xDB Contact Creator\Readme.txt" />
+    <None Include="xDB Contact Creator\Readme.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
