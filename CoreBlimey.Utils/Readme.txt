@@ -1,0 +1,1 @@
+﻿This is project contains some useful Utility classes and widgets to use with Sitecore
