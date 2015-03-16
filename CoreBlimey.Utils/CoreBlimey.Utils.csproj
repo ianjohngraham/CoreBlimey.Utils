@@ -41,11 +41,11 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Sitecore.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\CoreBlimey.OutcomeRules\libs\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Analytics.Model.dll</HintPath>
+      <HintPath>..\CoreBlimey.OutcomeRules\libs\Sitecore.Analytics.Model.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -75,9 +75,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libs\Sitecore.Analytics.dll" />
+    <Content Include="libs\Sitecore.Analytics.Model.dll" />
+    <Content Include="libs\Sitecore.Analytics.Outcome.dll" />
+    <Content Include="libs\Sitecore.Kernel.dll" />
     <Content Include="xDB Contact Creator\CreateContact.aspx" />
+    <None Include="Properties\PublishProfiles\dev.pubxml" />
     <None Include="xDB Contact Creator\Readme.md" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
