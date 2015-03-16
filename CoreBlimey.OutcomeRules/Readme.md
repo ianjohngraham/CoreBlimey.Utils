@@ -5,7 +5,7 @@ The project also contains a Pipline Processer to evaluate and run the rules and 
 
 * The pipeline processor appends to the InitializeTracker pipeline and is placed just after the following pipeline processor
 
-Sitecore.Analytics.Pipelines.InitializeTracker.RunRules
+   Sitecore.Analytics.Pipelines.InitializeTracker.RunRules
 
 * This project was compiled using binaries from Sitecore 8 Update-2
 
