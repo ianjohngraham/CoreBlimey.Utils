@@ -1,7 +1,13 @@
-﻿#x Outcome Rules Runner
+﻿#Outcome Rules Runner
 
-This project provides a way to trigger a Sitecore 8 Outcome using a custom Sitecore Rule Action.
+Due to the fact that currently Sitecore Outcomes are not able to be triggered in the Sitecore editor, I have created a custom Sitecore Rule Action to trigger an Outcome under specific condition using the Sitecore Rules Engine
+The project also contains a Pipline Processer to evaluate and run the rules and code for the Custom Rule action.
 
-The project contains a Pipline Processer to evaludate and run the rules and code for the Custom Rule action.
+*The pipeline processor appends to the InitializeTracker pipeline and is placed just after the following pipeline processor
 
-This project was compiled using binaries from Sitecore 8 Update-2
+Sitecore.Analytics.Pipelines.InitializeTracker.RunRules
+
+*This project was compiled using binaries from Sitecore 8 Update-2
+
+*The Sitecore items for the solution can be found under the packages directory
+
