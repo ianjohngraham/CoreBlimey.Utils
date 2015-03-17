@@ -78,6 +78,7 @@
     <Compile Include="Rules\SetOutcomeRuleAction.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Packages\Outcome Rules.zip" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
     <Content Include="libs\Sitecore.Analytics.dll" />
     <Content Include="libs\Sitecore.Analytics.Model.dll" />
@@ -88,9 +89,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\OutcomeRules.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Packages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
