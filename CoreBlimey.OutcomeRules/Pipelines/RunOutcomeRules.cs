@@ -5,7 +5,6 @@ using Sitecore.Rules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Sitecore;
 using Sitecore.Analytics.Pipelines.InitializeTracker;
 
@@ -27,7 +26,7 @@ namespace CoreBlimey.OutcomeRules.Pipelines
                 return;
             }
 
-            if(Sitecore.Context.Item.Paths.IsContentItem)
+            if(Context.Item.Paths.IsContentItem)
                  ProcessOutcomeRules();
         }
 
@@ -68,7 +67,7 @@ namespace CoreBlimey.OutcomeRules.Pipelines
             if (rules.Count < 1)
                 return false;
 
-            RuleContext ruleContext = new RuleContext { Item = Context.Item };
+            RuleContext ruleContext = new RuleContext { Item = outcomeItem };
             rules.Run(ruleContext);
             return ruleContext.IsAborted;
         }  
