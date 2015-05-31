@@ -67,7 +67,9 @@ namespace CoreBlimey.OutcomeRules.Pipelines
             if (rules.Count < 1)
                 return false;
 
-            RuleContext ruleContext = new RuleContext { Item = outcomeItem };
+            RuleContext ruleContext = new RuleContext { Item = Context.Item };
+            ruleContext.Parameters.Add("DefinitionItem",outcomeItem);
+            
             rules.Run(ruleContext);
             return ruleContext.IsAborted;
         }  
