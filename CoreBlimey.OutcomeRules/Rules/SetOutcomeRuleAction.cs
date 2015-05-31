@@ -20,7 +20,9 @@ namespace CoreBlimey.OutcomeRules.Rules
         {
             Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
-            SetOutcome(ruleContext.Item);
+            var outomeDefinitionItem = (Item)ruleContext.Parameters["DefinitionItem"];
+
+            SetOutcome(outomeDefinitionItem);
         }
 
         private void SetOutcome(Item definitonItem)
