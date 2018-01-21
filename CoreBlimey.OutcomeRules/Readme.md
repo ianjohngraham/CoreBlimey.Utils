@@ -1,4 +1,4 @@
-﻿#Outcome Rules Runner
+# Outcome Rules Runner
 
 Due to the fact that currently Sitecore Outcomes are not able to be triggered in the Sitecore editor, I have created a custom Sitecore Rule Action to trigger an Outcome under specific conditions using the Sitecore Rules Engine.
 
