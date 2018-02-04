@@ -45,9 +45,7 @@ namespace CoreBlimey.OutcomeRules.Rules
                 InteractionId = interactionId
             };
 
-            var manager = Factory.CreateObject("outcome/outcomeManager", true) as OutcomeManager;
-            if (manager != null) 
-                manager.Save(outcome);
+            Tracker.Current.RegisterContactOutcome(outcome);
         }
     }
 }
