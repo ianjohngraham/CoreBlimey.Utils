@@ -30,9 +30,9 @@ namespace CoreBlimey.OutcomeRules.Rules
             if (Tracker.Current == null)
                 return;
 
-            ID id = ID.NewID;
-            ID interactionId = ID.Parse(Tracker.Current.Interaction.InteractionId);
-            ID contactId = ID.Parse(Tracker.Current.Contact.ContactId);
+            var id = ID.NewID;
+            var interactionId = ID.Parse(Tracker.Current.Interaction.InteractionId);
+            var contactId = ID.Parse(Tracker.Current.Contact.ContactId);
             var definitionItem = definitonItem;
 
             if(Tracker.Current.HasOutcome(definitionItem.ID))

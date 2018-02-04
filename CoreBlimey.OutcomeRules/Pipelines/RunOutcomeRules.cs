@@ -20,7 +20,7 @@ namespace CoreBlimey.OutcomeRules.Pipelines
         {
             if (Context.Database == null
                 || Context.Item == null
-                || Context.PageMode.IsPageEditorEditing
+                || Context.PageMode.IsExperienceEditorEditing
                 || String.Compare(Context.Database.Name, "core", StringComparison.OrdinalIgnoreCase) == 0)
             {
                 return;
@@ -41,7 +41,7 @@ namespace CoreBlimey.OutcomeRules.Pipelines
 
         private IEnumerable<Item> GetOutcomeItems()
         {
-            Item outcomeRootItem = Sitecore.Context.Database.GetItem(ID.Parse(OutcomeRootItemId));
+            var outcomeRootItem = Sitecore.Context.Database.GetItem(ID.Parse(OutcomeRootItemId));
             if(outcomeRootItem != null)
               return outcomeRootItem.Axes.GetDescendants().Where(c => c.TemplateID.Equals(ID.Parse(OutcomeDefinitionId)) && !string.IsNullOrEmpty(c[RulesField])).ToList();
 
@@ -53,13 +53,13 @@ namespace CoreBlimey.OutcomeRules.Pipelines
             if (outcomeItem == null)
                 return false;
 
-            string ruleXml = outcomeItem[RulesField];
+            var ruleXml = outcomeItem[RulesField];
 
             if (String.IsNullOrEmpty(ruleXml))
                 return false;
 
-            RuleList<RuleContext> rules = new RuleList<RuleContext> { Name = outcomeItem.Paths.Path };
-            RuleList<RuleContext> parsed = RuleFactory.ParseRules<RuleContext>(
+            var rules = new RuleList<RuleContext> { Name = outcomeItem.Paths.Path };
+            var parsed = RuleFactory.ParseRules<RuleContext>(
                 Context.Database,
                 ruleXml);
             rules.AddRange(parsed.Rules);
@@ -67,7 +67,7 @@ namespace CoreBlimey.OutcomeRules.Pipelines
             if (rules.Count < 1)
                 return false;
 
-            RuleContext ruleContext = new RuleContext { Item = Context.Item };
+            var ruleContext = new RuleContext { Item = Context.Item };
             ruleContext.Parameters.Add("DefinitionItem",outcomeItem);
             
             rules.Run(ruleContext);
